@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ball Spin</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body, html {
+      overflow-x: hidden;
+    }
+
+    .webgl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    nav {
+      color: blanchedalmond;
+      z-index: 2;
+      position: relative;
+      padding: 4rem 8rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: blanchedalmond;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 4rem;
+    }
+
+    .title {
+      color: white;
+      z-index: 2;
+      position: absolute;
+      font-size: 3rem;
+      left: 50%;
+      top: 75%;
+      transform: translate(-50%, -75%);
+    }
+
+    .spotify-embed {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      padding: 1rem;
+      box-sizing: border-box;
+      background: transparent;
+      display: none; /* Initially hide the embed */
+      justify-content: center;
+    }
+
+    .buttons:hover {
+      cursor: pointer; /* Shows the standard arrow cursor */
+    }
+
+  </style>
+</head>
+<body>
+  <canvas class="webgl"></canvas>
+  <nav>
+    <a href="/">Shapeify.kau</a>
+    <ul class="buttons">
+      <li id="musicButton">Music</li>
+      <li>Create</li>
+    </ul>
+  </nav>
+  <h1 class="title"></h1>
+
+  <!-- Spotify Embed -->
+  <div class="spotify-embed">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5PEpBinndr8u5d9q8vcym1?utm_source=generator" 
+    width="50%" height="160" frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy"></iframe>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
